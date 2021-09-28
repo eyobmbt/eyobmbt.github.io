@@ -5,6 +5,7 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration: underline;
     text-align: left;
     font-size: 18pt;
+    letter-spacing: 0.25px;
     /*underlined*/
 }
 h1{
@@ -15,10 +16,19 @@ h1{
 }
 body{
     background-color: white;
+    background-image: url("recipeImages/silverware.jpg");
     color: #404040;
     font-size: 11pt;
     font-family: Garamond,Georgia, serif;
 }
 a{
     color: #A4A400;
+}
+blockquote{
+    background-color: #FFFFA8 ;
+    font-style: italic;
+}
+
+ul{
+    list-style-image: url("recipeImages/pie_icon.gif");
 }
