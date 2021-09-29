@@ -37,3 +37,6 @@ p.cour{
     text-align: center;
     
 }
+span.cake{
+    text-decoration: line-through;
+}
