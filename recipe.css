@@ -2,11 +2,10 @@ h1,h2,h3,h4,h5,h6 {
     color: #A4A400;
     background-color:#F0F0F0;
     font-family: Lucida, "Sans Unicode", Helvetica, Arial,sans-serif;
-    text-decoration: underline;
     text-align: left;
     font-size: 18pt;
     letter-spacing: 0.25px;
-    /*underlined*/
+    text-decoration: underline;
 }
 h1{
     text-align: center;
@@ -31,4 +30,10 @@ blockquote{
 
 ul{
     list-style-image: url("recipeImages/pie_icon.gif");
+}
+p.cour{
+    letter-spacing: 0.5px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    
 }
