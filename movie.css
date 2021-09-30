@@ -1,0 +1,146 @@
+body{
+    background-image: url("images/background.png");
+    size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+
+}
+
+.banner_image{
+    
+    background-image: url("images/bannerbg.png");
+    background-repeat: repeat-x;
+ 
+
+}
+.imgbanner{
+   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h1{
+    size: 24pt;
+   text-align: center; 
+   font-family: Tahoma,Verdana, sans-serif;
+   text-shadow: 3px 3px #999999;
+}
+p.comment{
+    width: 90%; 
+    background-color:  #E8DC9B;
+    border:2px solid gray ;
+    border-radius: 10px;
+    margin-left: 4%;
+    font-size: 8pt;
+    font-weight: bold;
+
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid gray;
+    border-radius: 20px;
+
+}
+
+#image_center{
+
+}
+
+.rotten{
+   
+    width:275px;
+    margin-left: 0%;
+    background-image: url("images/rbg.png");
+    background-repeat: repeat-x;
+    
+   
+}
+.rotten1{
+
+    width:275px;
+    margin-left: 0%;
+    background-image: url("images/rbg.png");
+    background-repeat: repeat-x;
+
+}
+.image_right{
+    width:250px; 
+    background-color: #A2B964; 
+    font-size: 8pt;
+    border-radius: 12px;
+}
+/***************************************************/
+
+#span33{
+    font-size: 48pt;
+    color: red;
+    font-weight: bold;
+
+
+}
+.mainpage{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid gray;
+    border-radius: 20px;
+
+}
+#rate_image,#over_image{
+    border-radius: 20px;
+}
+.name_c{
+font-style: italic;
+text-align: center;
+
+}
+.usercomment{
+
+    width:550px;
+    margin-left: 4%;
+    background-image: url("images/rbg.png");
+    background-repeat: repeat-x;
+    display: flex;
+    margin: 10px;
+    border-radius: 20px;
+
+}
+p.user{
+    text-align: left;
+    margin-left: 4%;
+    font-size: 8pt;
+}
+.image_comm{
+    text-align: left;
+    margin-left: 4%;
+    font-size: 8pt;
+    float:left;
+}
+.img{
+    clear: both;
+    align-content: flex-end;
+}
+.buttom{
+    background-color: #A2B964; 
+    height: 3.85%;
+    width: 110%;
+}
+.buttom1{
+    background-color: #A2B964; 
+    height: 4%;
+    width: 110%;
+    border-radius: 20px;
+}
+.validation{
+    float:right;
+  margin-right: 0%;
+
+}
