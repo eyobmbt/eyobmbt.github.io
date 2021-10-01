@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+<title>W1D5 Eyob Ass</title>
+
+    <script>
+function testFunction(expected,found){
+    if(expected===found){
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILD (Expected value: "+expected+", Return Found: "+found+")";
+    }
+
+}
+
+function arraySizeFunctionTest(expected,found){
+    if(expected.length==found.length){
+        return "TEST SUCCEEDED";
+    } else {
+        return "TEST FAILD (Expected value: "+expected+", Return Found: "+found+")";
+    }
+}
+
+
+function max(number1,number2){
+    if(number1>number2){
+        return number1;
+    } else{
+        return number2;
+    }
+}
+//Test max(number1,number2)
+console.log("Expected output of max(100,200) is 200 "+ testFunction(200,max(200,100)));
+
+function maxOfThree(number1,number2,number3){
+    if(number1>number2) {
+        if(number1>number3){
+            return number1;
+        } else{
+            return number3;
+        }
+    } else {
+        if(number2>number3){
+            return number2;
+        } else{
+            return number3;
+        }
+    }
+}
+//Test maxOfThree(number1,number2)
+console.log("Expected output of maxOfThree(100,200,300) is 300 "+ testFunction(300,maxOfThree(200,100,300)));
+console.log("Expected output of maxOfThree(100,100,400) is 400 "+ testFunction(400,maxOfThree(100,100,400)));
+console.log("Expected output of maxOfThree(100,100,400) is -100 "+ testFunction(-100,maxOfThree(-100,-100,-100)));
+
+
+function isVowel(c){
+    if(c==='a'||c==='e'||c==='i'||c==='o'||c==='u'||c==='A'||c==="E"||c==='I'||c==='O'||c==='U'){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//Test function isVowel(c)
+console.log("Expected output of isVowel(i) is true "+ testFunction(true,isVowel("a")));
+console.log("Expected output of isVowel(b) is false "+ testFunction(false,isVowel("b")));
+console.log("Expected output of isVowel(A) is true "+ testFunction(true,isVowel("A")));
+console.log("Expected output of isVowel(J) is false "+ testFunction(false,isVowel("J")));
+
+
+
+function sum(arr){
+
+    let sum=0;
+    for(let i=0;i<arr.length;i++){
+        sum+=arr[i];
+    }
+    return sum;
+}
+//Test function sum(arr)
+console.log("Expected output of sum([-1,-2,-3]) is -6 "+ testFunction(-6,sum([-1,-2,-3])));
+console.log("Expected output of sum([1,2,3]) is 6 "+ testFunction(6,sum([1,2,3])));
+console.log("Expected output of sum([]) is 0 "+ testFunction(0,sum([])));
+console.log("Expected output of sum([-5,5]) is 0 "+ testFunction(0,sum([-5,5])));
+
+
+function multiply(arr){
+    if(arr.length<1) return 0;
+    let prod=1;
+    for(let i=0;i<arr.length;i++){
+        prod*=arr[i];
+    }
+    return prod;
+}
+console.log("Expected output of multiply([3,2,4]) is 24 "+ testFunction(24,multiply([3,2,4])));
+console.log("Expected output of multiply([]) is 0 "+ testFunction(0,multiply([])));
+console.log("Expected output of multiply([-5,5]) is -25 "+ testFunction(-25,multiply([-5,5])));
+
+function reverse(arr){
+    let arrRet=arr.charAt(arr.length-1);
+    for(let j=arr.length-2;j>=0;j--){
+        arrRet=arrRet+arr.charAt(j);
+    }
+    return arrRet;
+}
+
+//Test function reverse(arr)
+console.log("Expected output of reverse(\"Hello\") is olleH " + testFunction("olleH",reverse("Hello")));
+console.log("Expected output of reverse(\"H\") is H " + testFunction("H",reverse("H")));
+console.log("Expected output of reverse(\"AA\") is AA " + testFunction("AA",reverse("AA")));
+
+function findLongestWord(arr){
+    if(arr.length<1) return 0;
+    
+    let elem=arr[0];
+    let size=elem.length;
+    for(let i=1;i<arr.length-1;i++){
+        if(arr[i].length>elem.length){
+            elem=arr[i];
+            size=elem.length;
+        }
+    }
+    return size;
+}
+
+//Test function findLongestWord(arr)
+console.log("Expected output of findLongestWord([]]) is 0 " + testFunction(0,findLongestWord([])));
+console.log("Expected output of findLongestWord([\"Hello\",\"Welcome\",\"Hi\",\"Good\"]) is 7 " + testFunction(7,findLongestWord(["Hello","Welcome","Hi","Good"])));
+console.log("Expected output of findLongestWord([\"Hi\",\"hi\",\"Hi\",\"hi\"]) is 2 " + testFunction(2,findLongestWord(["Hi","hi","Hi","hi"])));
+
+
+
+function filterLongestWord(arrWord,len){
+    let arr=[]; let j=0;
+    for(let i=0;i<arrWord.length;i++){
+        if(arrWord[i].length>=len){
+            arr[j]=arrWord[i];
+            j++;
+        }
+    }
+    return arr;
+}
+
+//Test function findLongestWord(arr)
+console.log("Expected output of filterLongestWord([]]) is []] " + filterLongestWord([],filterLongestWord([])));
+console.log("Expected output of filterLongestWord([\"Hello\",\"Welcome\",\"Hi\",\"Good\"],4) is 7 " +
+ arraySizeFunctionTest(["Hello","Welcome","Good"],filterLongestWord(["Hello","Welcome","Hi","Good"],4)));
+console.log("Expected output of filterLongestWord([\"Hi\",\"hi\",\"Hi\",\"hi\"],3) is [] " + 
+arraySizeFunctionTest([],filterLongestWord([],["Hi","hi","Hi","hi"],3)));
+
+
+
+document.writeln("<h2>Exersise 8 </h2>\n")
+
+document.writeln("Exersise 8a for a = [1,3,5,3,3]:  ")
+const a = [1,3,5,3,3]; 
+const b = a.map(function(elem, i, array) {
+  return elem * 10;
+})
+document.writeln(b.toString() + "<br/>");
+
+document.writeln("Exersise 8b for a = [1,3,5,3,3]:  ")
+const c = a.filter(function(elem, i, array){
+  return elem === 3;});
+document.writeln(c.toString() + "<br/>");
+
+document.writeln("Exersise 8b for a = [1,3,5,3,3]:   ")
+const d = a.reduce(function(prevValue, elem, i, array){
+  return prevValue * elem;
+});
+document.writeln(d+ "<br/>");
+
+</script>
+</head>
+<body>
+    <br><br> <h1>For Exercises 1-7 you can check the test cases on Developer Console. </h1>
+
+</body>
+</html>
