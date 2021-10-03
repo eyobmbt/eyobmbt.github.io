@@ -36,6 +36,7 @@ function selectAnimation(){
     clearTimeout(myTimer);
     document.getElementById("start").disabled = false;
     document.getElementById("stop").disabled = true;
+
     textArea.value="";
     switch(selection.value){
         case "Blank": textArea.value=EXERCISE; break;
@@ -48,6 +49,7 @@ function selectAnimation(){
 document.getElementById('start').onclick=animationStart;
 function animationStart(){
     clearTimeout(myTimer);
+    document.getElementById("turbo").disabled = true;
     document.getElementById("animation").disabled=true;
     document.getElementById("stop").disabled = false;
     document.getElementById("start").disabled = true;
@@ -65,6 +67,7 @@ function animationStart(){
 stop1=document.getElementById("stop").onclick=stopClicked;
 function stopClicked(){
     clearTimeout(myTimer);
+    document.getElementById("turbo").disabled = false;
     document.getElementById("start").disabled = false;
     document.getElementById("stop").disabled = true;
     document.getElementById("animation").disabled=false;
