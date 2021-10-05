@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="val.css" rel="stylesheet"></script>
+  <!-- add mocha css, to show results -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- add mocha framework code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <!-- add chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+   <script src="funcProg.js">
+</script>
+
+<!-- the script with tests (describe, it...) -->
+<script src="mochtest.js"></script>
+
+<!-- the element with id="mocha" will contain test results -->
+<div id="mocha"></div>
+
+<!-- run tests! -->
+<script>
+  mocha.run();
+</script>
+
+</head>
+<body>
+   
+<fieldset class="emailfield">
+    <legend></legend>
+<form >   
+<div id="informe">Email address</div>    
+<div><input id="email" type="text" placeholder="Enter email"/> </div>
+<div id="txtMesg">We 'll never share your email with anyone else.</div>
+<div id="informp">Password</div>
+<div id="inform"><input id="password" type="password" placeholder="Password" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]+).{10,})"/></div>
+<div><input type="checkbox" id="checkbox"/> Check me out</div>
+<div><input type="submit" id="submitbtn"/></div>
+</form>
+</fieldset>
+<script src="validation.js"> </script>
+</body>
+
+</html>

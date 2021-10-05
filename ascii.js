@@ -1,3 +1,6 @@
+    window.onload=function(){
+        "use strict";
+    }
     let textArea=document.getElementById("text-area");
     let selection=document.getElementById("animation");
     var myTimer;

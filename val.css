@@ -1,0 +1,137 @@
+#item1{grid-area: headeritem1;
+
+}
+#item1,#item2{
+    border-right: solid white;
+    margin-right: 6px;
+}
+#item2{grid-area: headeritem2;}
+#item3{grid-area: headeritem3;}
+#item4{grid-area: headeritem4;}
+#item5b{ grid-area: headeritem5;}
+
+#item5{grid-area: mainitem5;}
+#item6{grid-area: mainitem6;}
+#item7{grid-area: mainitem7;}
+#item8{grid-area: mainitem8;}
+#item9{ grid-area: mainitem9;}
+#item10{ grid-area: mainitem10;}
+
+#item11{grid-area: mainitem11;}
+#item12{grid-area: mainitem12;}
+#item13{grid-area: mainitem13;}
+#item14{grid-area: mainitem14;}
+#item15{ grid-area: mainitem15;}
+#item16{ grid-area: mainitem16;}
+
+
+#item17{grid-area: footer17;}
+#item18{ grid-area: footer18;}
+#item19{ grid-area: footer19;}
+#item20{ grid-area: footer20;}
+
+.class1{
+    display: grid;
+    background-color: rgb(100, 166, 247);
+    padding: 15px;
+    color: white;
+    grid-area: oclass1;
+    border-radius: 6px;
+    grid-template-areas: 'headeritem1 headeritem2 headeritem3 headeritem3 headeritem3 headeritem3 headeritem4 headeritem5';
+}
+#item6,#item8,#item10,#item12,#item14,#item16{
+    width:450px;  
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    border:1px solid gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.class1,.class2,.class3,.class4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.class2{grid-area: oclass2; 
+margin: 20px;}
+.class3{grid-area: oclass3;
+margin: 20px;}
+.class4{grid-area: oclass4; 
+    margin: 20px;
+    display: grid;
+grid-template-areas: 'footer20 footer20 footer20 footer20 footer20  footer17 footer18 footer19';}
+#item17,#item18,#item19{
+    width: 100pt;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 5px;
+}
+#item17{
+    border-color: rgb(40, 4, 147);
+    color: rgb(40, 4, 147);
+}
+#item18{
+    border-color: orangered;
+    color: orangered;
+}
+#item19{
+    border-color: lightskyblue;
+    color: lightskyblue;
+}
+#item5b{
+    background-color: lightskyblue;
+    border-radius: 8px;
+    color: white;
+    padding: 8px;
+    border: lightskyblue;
+}
+.maincontainer{
+    display: grid;
+    grid-template-areas: 'oclass1 oclass1'
+    'oclass2 oclass3'
+    'oclass4 oclass4';
+    border-radius: 6px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+.emailfield{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px ;
+    margin: 3px;
+    width: 600px;
+}
+#informe,#informp,#checkbox{
+    margin-top: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+#checkbox{
+    border-radius: 5px;   
+}
+#password,#email{
+    width:300px;  
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    border:1px solid gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#txtMesg{
+color: dimgrey;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  #submitbtn{
+      width: 130pt;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 10px;
+      border: white;
+      background-color: rgb(82, 149, 250);
+      margin-top: 5px;
+  }
