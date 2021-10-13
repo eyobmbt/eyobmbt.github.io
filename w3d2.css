@@ -1,0 +1,17 @@
+.cir_container{
+grid-area:"formplace";
+width: 85%;
+}
+.form-action{
+    width: 15%;
+    background-color: lemonchiffon;
+    grid-area:"formaction";
+}
+.maincontainer{
+    grid-template-areas: 'formaction formplace';
+}
+
+  
+.circle0,.circle1,.circle3.circle4,.circle5,.circle6:hover {
+    opacity: 0.5;
+  }
