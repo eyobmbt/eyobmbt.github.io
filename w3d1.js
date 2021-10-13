@@ -6,7 +6,7 @@ $(function(){
    $("#start").click(function(){
    wid=$('#circle-width')[0].value;
    interval=$('#circle-interval')[0].value
-    grow=$('#circle-growth')[0].value;
+    grow=$('#circle-growth').val();
     numbCircle=$('#circle-no')[0].value;
     crateCircle();
     increaseSizeByInterval();
@@ -61,8 +61,8 @@ let size=function (){
 for(let i=0;i<numbCircle;i++){
     
 $(`div.circle${i}`).css(
-    {"width":function(idx,old){return 10+parseInt(old)+"px";}
-    ,"height":function(idx,old){return 10+parseInt(old)+"px";}
+    {"width":function(idx,old){return parseInt(grow)+parseInt(old)+"px";}
+    ,"height":function(idx,old){return parseInt(grow)+parseInt(old)+"px";}
     });
 }
 }
