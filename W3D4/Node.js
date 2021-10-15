@@ -23,4 +23,3 @@ let getNumber=function(){
 
 };
 getNumber();
-}
