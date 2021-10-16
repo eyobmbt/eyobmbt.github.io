@@ -46,7 +46,7 @@ res.send(`Welcome ${name} and Your age is: ${age} `);
  });
  app.get('/output',(req,res)=>{
 
- res.redirect(303,'/redirect');
+ res.redirect(303,'/result');
  
  });
 app.listen(3005);
