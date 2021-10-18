@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .header{
+                text-align: center;
+background-color:rgb(81, 132, 145);
+grid-area:hh;
+}
+
+.left{
+
+    background-color:rgb(11, 70, 85);
+    grid-area:ll;
+}
+.right{
+
+    background-color:rgb(11, 70, 85);
+    grid-area:rr;
+}
+.middle{
+
+    background-color:rgb(37, 157, 135);
+    grid-area:mm;
+    width: 900px;
+    height: 600px;
+}
+.footer{
+    background-color:rgb(81, 132, 145);
+    grid-area:ff;
+}
+.container{
+    right: auto;
+    left: auto;
+    display: grid;
+    grid-template-areas: 
+    'hh hh  hh'
+    'rr mm ll'
+    'ff ff ff';
+
+}
+table{
+    text-align: left;
+    width: 100%;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+ 
+}
+tr:nth-child(odd) {
+  background-color: #85e9e9;
+ 
+}
+td{
+    text-align: left;
+}
+        </style>
+      
+        
+        <title>Using Template W3d6 q2 assignment</title>
+    </head>
+    <body>
+    <div class="container">
+        <div class="header"><h2>Select list of products you want to buy</h2></div>
+        <div class="left"></div>
+        <div class="middle">
+   
+            <table>
+                <form action="/result" method="post">
+          <tr><th>Product</th><th>Price</th><th>Order Quantity</th><th>Order</th></tr>     
+<% for (let prod in product) {%>
+    <tr>
+    <td name="prodName"><%=prod%> </td>
+    <td name="prodPrice"><%=product[prod]%> </td>
+    <td><input type="number" name="qnt"></td>
+    <td><button class="addbtn" type="submit" id="<%=prod%>" >Add</button></td>
+</tr>
+<%}%>
+
+</form>
+
+
+<tr><td><td><td><form action="/cart" method="GET" ><button type="submit">My Cart</button></form></td><td></td></tr>
+</table>
+
+
+  
+        </div>
+        <div class="right"></div>
+        <div class="footer">Date:</div>
+    </div>
+    </body>
+</html>

@@ -24,4 +24,4 @@ app.get('/',(req,res)=>{
     res.send(`Welcome ${name} and Your age is: ${age}`);
     
  });
-app.listen(3003);
+app.listen(3006);
