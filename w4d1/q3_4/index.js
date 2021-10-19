@@ -29,8 +29,9 @@ let mycart={"Mac":0,
 "Toshiba":0};
 app.use((req,res,next)=>{
     if(!req.session){
+        req.session.quantity={};
         for(let pro in product){
-            req.session[pro]=0;
+            req.session.quantity[pro]=0;
         }
     }
 
@@ -46,17 +47,18 @@ app.get('/',(req,res)=>{
 app.get('/cart',(req,res)=>{
    
     res.render("shop",
-     { mycart:product,quanity:req.session
+     { mycart:product,
+        quantity:req.session.quantity
     });
 });
 
 app.post('/result',(req,res)=>{
 
-    req.session["Mac"]+=req.body.qnt0;
-    req.session["Dell"]+=req.body.qnt1;
-    req.session["HP"]+=req.body.qnt2;
-    req.session["Acer"]+=req.body.qnt3;
-    req.session["Toshiba"]+=req.body.qnt4;
+    req.session.quantity["Mac"]+=req.body.qnt0;
+    req.session.quantity["Dell"]+=req.body.qnt1;
+    req.session.quantity["HP"]+=req.body.qnt2;
+    req.session.quantity["Acer"]+=req.body.qnt3;
+    req.session.quantity["Toshiba"]+=req.body.qnt4;
     res.redirect(303,'/shop');
    
 
