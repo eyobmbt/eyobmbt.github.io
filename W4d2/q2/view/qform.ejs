@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Magic 8 Ball</title>
+    <meta charset="utif-8">
+</head>
+<body>
+    <form id="ask" action='/ask' method="post">
+        <div>
+            <% if (ans == '') { 
+                var answer="ask any question!"
+              
+                 } else {  
+                     answer=ans;
+                    
+                 }%>
+
+            <input id="qtext" value="<%=answer%>">
+        </div>
+        <div>
+            <input type="submit" value="Ask">
+        </div>
+        </form>
+</body>
+</html>
